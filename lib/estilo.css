@@ -1,4 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+header.main_header {
+  color: white;
+  background-color: #003;
+  padding: 5px 25px 5px 25px;
+}
+
 .row div {
   background-color: #E6E2EB;
   border: 1px solid #999;
+}
+
+.f32 {
+  font-size: 32px;
+}
+
+.external_link {
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }

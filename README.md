@@ -5,8 +5,35 @@ Creado como parte del curso [60+ Herramientas de desarrollo y diseño web](https
 Una completa colección de recursos que debes tener y conocer, totalmente gratuitos.
 Creado por [Fernando Herrera](https://www.udemy.com/recursos-web-plugins-y-utilidades/#instructor-1).
 
-## 03 Bootstrap
+## Introducción
+
+### Bootstrap
 06-bootstrap.html
 
-## 05 Font-Awesome
+## Fuentes
+
+### Font-Awesome
 05-fontawesome.html
+
+### Font-Awesome
+06-ionicons.html
+
+### Font-Awesome
+07-glyphicons.html
+
+### Google Fonts
+08-googlefonts.html
+
+### Blokkfont
+09-blokkfont.html
+
+### Weather-icons
+10-weathericons.html
+
+## Iconos, letras e imágenes
+
+### Favicon Generator
+12-favicon_generator.html
+
+### Iconspedia
+13-iconspedia.html
