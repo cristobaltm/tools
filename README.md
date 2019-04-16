@@ -37,3 +37,21 @@ Creado por [Fernando Herrera](https://www.udemy.com/recursos-web-plugins-y-utili
 
 ### Iconspedia
 13-iconspedia.html
+
+### CSS Author
+14-cssauthor.html
+
+### Freepik
+15-freepik.html
+
+### Skitch
+16-skitch.html
+
+### ARCTEXT.JS
+17-arctext.html
+
+### Shuffle Letters
+18-shuffle_letters.html
+
+### mThumb
+19-mthumb.html

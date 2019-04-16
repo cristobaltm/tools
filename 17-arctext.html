@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Iconspedia</title>
+    <title>ARCTEXT.JS</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -12,7 +12,14 @@
     <link rel="stylesheet" href="lib/estilo.css">
 
     <!-- Estilos de los recursos adicionales -->
-
+    <style>
+      h2 {
+        display: block;
+      }
+      #txt_arc_2, #txt_arc_4 {
+        margin-top: 130px;
+      }
+    </style>
 
   </head>
   <body>
@@ -25,7 +32,7 @@
         <a href="https://www.udemy.com/recursos-web-plugins-y-utilidades" target="_blank" class="btn btn-default" title="Home">
           <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
         </a>
-        <a href="https://www.iconspedia.com/" target="_blank" class="btn btn-default" title="Enlace">
+        <a href="https://tympanus.net/Development/Arctext/" target="_blank" class="btn btn-default" title="Enlace">
           <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
         </a>
       </div>
@@ -34,17 +41,15 @@
     <div class="container">
 
       <div class="page-header">
-        <h1>Iconspedia</h1>
-        <p class="lead">colección de iconos.</p>
+        <h1>ARCTEXT.JS</h1>
+        <p class="lead">Plugin de JQuery para curvar textos.</p>
       </div>
 
       <!-- Editar desde aquí  -->
-      <a href="https://www.iconspedia.com/" target="_blank" class="external_link">
-        <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
-        Recurso web externo
-      </a>
-
-
+      <h2 id="txt_arc_1">Hola, soy un texto curvado.</h2>
+      <h2 id="txt_arc_2">Soy un texto curvado a la inversa.</h2>
+      <h2 id="txt_arc_3">Texto curvado y letras rectas.</h2>
+      <h2 id="txt_arc_4">Texto curvado con animación.</h2>
 
 
       <!-- Hasta aquí modificaremos -->
@@ -56,6 +61,32 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Librerías de plugins -->
+    <script src="lib/jquery.arctext.js"></script>
+    <script>
+      var $txt_arc_1 = $("#txt_arc_1");
+      $txt_arc_1.arctext({radius: 300});
+
+      var $txt_arc_2 = $("#txt_arc_2");
+      $txt_arc_2.arctext({radius: 400, dir: -1});
+
+      var $txt_arc_3 = $("#txt_arc_3");
+      $txt_arc_3.arctext({radius: 500, rotate: false})
+
+      var $txt_arc_4 = $("#txt_arc_4");
+      $txt_arc_4.arctext({radius: 300});
+
+      setTimeout( function(){
+        $txt_arc_4.arctext('set', {
+          radius		: 300,
+          dir			: -1,
+          animation	: {
+            speed	: 300,
+            easing  : 'ease-out'
+          }
+        })
+      }, 1000 );
+
+    </script>
 
 
     <!-- Archivo personalizado de Javascript -->

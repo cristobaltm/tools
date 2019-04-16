@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Iconspedia</title>
+    <title>Shuffle Letters</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -12,7 +12,13 @@
     <link rel="stylesheet" href="lib/estilo.css">
 
     <!-- Estilos de los recursos adicionales -->
-
+    <style>
+      #texto_mazclado {
+        font-size: 3em;
+        color: #999;
+        padding-left: 50px;
+      }
+    </style>
 
   </head>
   <body>
@@ -25,7 +31,7 @@
         <a href="https://www.udemy.com/recursos-web-plugins-y-utilidades" target="_blank" class="btn btn-default" title="Home">
           <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
         </a>
-        <a href="https://www.iconspedia.com/" target="_blank" class="btn btn-default" title="Enlace">
+        <a href="https://tutorialzine.com/2011/09/shuffle-letters-effect-jquery" target="_blank" class="btn btn-default" title="Enlace">
           <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
         </a>
       </div>
@@ -34,17 +40,13 @@
     <div class="container">
 
       <div class="page-header">
-        <h1>Iconspedia</h1>
-        <p class="lead">colección de iconos.</p>
+        <h1>Shuffle Letters</h1>
+        <p class="lead">Animación de texto, que aparece aleatoriamente.</p>
+        <p class="lead">Cortesía de <a href="https://tutorialzine.com" target="_blank">tutorialzine.com</a>.</p>
       </div>
 
       <!-- Editar desde aquí  -->
-      <a href="https://www.iconspedia.com/" target="_blank" class="external_link">
-        <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
-        Recurso web externo
-      </a>
-
-
+      <div id="texto_mazclado"></div>
 
 
       <!-- Hasta aquí modificaremos -->
@@ -56,7 +58,31 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Librerías de plugins -->
+    <script src="lib/jquery.shuffleLetters.js"></script>
+    <script src="lib/script.shuffleLetters.js"></script>
+    <script>
+      var texto_mazclado = $("#texto_mazclado");
+      var mensajes = [
+        "Hola visitante",
+        "Bienvenido a mi página web",
+        "Espero que te guste"
+      ];
+      var actual = 0;
 
+      setInterval( function() {
+
+        texto_mazclado.shuffleLetters({
+          "text" : mensajes[actual]
+        });
+
+        actual++;
+        if(actual >= mensajes.length) {
+          actual = 0;
+        }
+
+      }, 4000);
+
+    </script>
 
     <!-- Archivo personalizado de Javascript -->
     <script src="lib/curso.js"></script>
